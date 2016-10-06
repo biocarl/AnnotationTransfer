@@ -1,0 +1,50 @@
+Dependencies:
+
+- Before you use that program you have to install the following 
+	
+	- RATT/Mummer
+	- Biopython
+Explained in the following:
+
+Note: The install-Scripts are only there for orientation! Open them and modify them to your needs (e.g. location for bin's etc)
+
+
+#############################
+
+INSTALL RATT/Mummer
+
+0) if you want to change the folder for installation then open bash-Skript and change $path-Variable (default: $HOME/bin)
+
+1)>bash install_RATT.sh
+
+2) Re-log to the server
+
+3*) You can use the program now; see : http://ratt.sourceforge.net/documentation.html#How_to_call_the_program
+
+4*) Instead of '$RATT_HOME/start.ratt.sh' you can use 'ratt'
+
+UNINSTALL
+1) cd $HOME/bin/mummer;make uninstall;
+2) Folder in $HOME/bin was created, delete if if not present before (or delete RATT and mummer-folder)
+3) in $HOME/.bashrc several Paths were set up, delete segment marked with the followig
+		
+	##RAST/MUMMER
+	[...]
+	##RAST/MUMMER
+
+
+###########################
+
+INSTALL Biopython  *Adapted to server environment
+
+0) Install a seperate Python 2.7.* (since you don't have admin-rights on the Server)
+1) Install numpy if not present (usually should)
+2) mkdir $wherePythonInstalled/site-packages (e.g. $HOME/bin/Python2.7.3/site-packages)
+3) python2 -m pip install --target=$wherePythonInstalled/site-packages biopython
+4) add the following to your .bashrc: 
+	export PYTHONPATH="${PYTHONPATH}:$wherePythonInstalled"
+5*)For using the programm also use that python installation: You can also save a alias like that for your .bashrc
+	e.g. alias pp='$HOME/bin/Python-2.7.8/python'
+6*)Check if Biopython was successfully installed by entering the python-shell (no errors should occur):
+	>>>import Bio
+7*)If you have problems here, there is many tutorials how to compile biopython. But Installation over pip is probably the fastest way. You  can also ask the Server-Admin to install the Biopython-libs
