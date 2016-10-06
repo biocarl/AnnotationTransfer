@@ -1,0 +1,12 @@
+#Examples
+
+#Submit job
+svr_submit_RAST_job --user bioflash1 --passwd asasdas --taxon_id 945712 --bioname "Corynebacterium ulcerans BR-AD22" --domain Bacteria --genetic_code 11 --fasta CUL_104_4-1.fasta
+
+#checking job-Status
+svr_status_of_RAST_job bioflash1 asdasd 389280
+	#running: status for job 389280: running
+	#finished: status for job 388027: complete
+
+#Download need file
+svr_retrieve_RAST_job bioflash1 asdasd 393440 embl > CUL_RAST_CLEAN.embl
