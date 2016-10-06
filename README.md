@@ -11,8 +11,7 @@ IMPORTANT: In order to use that program several dependencies have to be installe
 
 In order to provide RAST-Annotations there is also a Install-Script for the RAST batch interface, see also: http://blog.theseed.org/servers/usage/the-rast-batch-interface.html
 
-
------main.py
+|main.py
 
 This program uitilizes RATT in order to transfer annotations from one organism to a closly related organism. For detailed description see the -h option of main.py
 example:
@@ -20,8 +19,8 @@ example:
 
 The following scripts are used by main.py but can also used separately
 
------RATT_Correction.py
+|RATT_Correction.py
 Parses a embl-file an applies the correct colour-code to each feature, based on joined-regions, missing start/stop-Codons and Stop-Codons in a coding-region
 
------mergeFeatures.py
+|mergeFeatures.py
 Adds features from embl-file (e.g. rast-annotated) to another embl-file (e.g. ratt-annotaed) if there are no interference of the feature-positions 
