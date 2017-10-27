@@ -8,12 +8,13 @@ source=$HOME/.bashrc
 mkdir $path
 mkdir $path_mummer
 
+
 #Install must-have programs
-sudo apt-get --assume-yes  python-setuptools python-dev build-essential git wget vim tar mummer
+sudo apt-get --assume-yes install python-setuptools python-dev build-essential subversion git wget vim tar mummer
 #INstall pip
 sudo easy_install pip
 #install biopython
-pip install biopython
+sudo pip install biopython
 
 #Downloading mummer
 wget --no-check-certificate https://sourceforge.net/projects/mummer/files/latest/download?source=files -O mummer.tar.gz
@@ -28,7 +29,9 @@ make install
 #Downloading/Installing RATT
 cd $path
 #svn co "https://svn.code.sf.net/p/ratt/code/" RATT
-git clone https://github.com/ThomasDOtto/ratt.git RATT
+git clone https://github.com/ThomasDOtto/ratt.git RATT_Additional
+svn co "https://svn.code.sf.net/p/ratt/code/" RATT
+\cp $path/RATT_Additional/main.ratt.pl $path/RATT/
 
 #!!!!!! to get of the warnings: Set-Up-Paths & Environment-Vars, according to the tutorial
 #no warnings 'deprecated';
