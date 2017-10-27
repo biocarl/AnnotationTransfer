@@ -1,0 +1,1 @@
+python ../main.py --rast CUL_RAST_CLEAN.embl --reference embl/ --query CUL_104_4-1.fasta --output $HOME
