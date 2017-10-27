@@ -4,8 +4,9 @@ Dependencies:
 	
 	- RATT/Mummer
 	- Biopython
-Explained in the following:
+	- also update your Perl version ;-)
 
+Explained in the following:
 Note: The install-Scripts are only there for orientation! Open them and modify them to your needs (e.g. location for bin's etc)
 
 

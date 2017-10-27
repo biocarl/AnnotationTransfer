@@ -9,10 +9,8 @@ mkdir $path
 mkdir $path_mummer
 
 
-
 #Install must-have programs
-sudo apt-get --assume-yes install subversion git wget vim tar
-
+sudo apt-get --assume-yes install subversion git wget vim tar mummer
 
 #Downloading mummer
 wget --no-check-certificate https://sourceforge.net/projects/mummer/files/latest/download?source=files -O mummer.tar.gz
@@ -26,8 +24,8 @@ make install
 
 #Downloading/Installing RATT
 cd $path
-svn co "https://svn.code.sf.net/p/ratt/code/" RATT
-
+#svn co "https://svn.code.sf.net/p/ratt/code/" RATT
+git clone https://github.com/ThomasDOtto/ratt.git RATT
 
 #!!!!!! to get of the warnings: Set-Up-Paths & Environment-Vars, according to the tutorial
 #no warnings 'deprecated';
@@ -54,6 +52,7 @@ alias ratt='$RATT_HOME/start.ratt.sh'
 
 ##RATT/MUMMER
 EOF
+
 
 #source .bashrc
 source $source
