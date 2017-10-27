@@ -24,7 +24,7 @@ def main(argv):
 
 	--rast		<Path> (a embl-file containing a RAST-Annotation for the file specified in query)
 
-	--reference	<Path> (a folder containing one or more embl-files for transfer)
+	--reference	<Path> (a FOLDER(!!) containing one or more embl-files for transfer)
 
 	--query		<Path> (a fasta-file of the organism without annotations)
 
@@ -44,7 +44,7 @@ def main(argv):
 
 
 	Example
-	>python script.py --rast CUL_Rast.embl --reference /embl_files --query CUL.fasta --output $HOME/data/output/CUL_Final
+	>python script.py --rast CUL_Rast.embl --reference embl_files/ --query CUL.fasta --output $HOME/data/output/CUL_Final
 
 	'''
 

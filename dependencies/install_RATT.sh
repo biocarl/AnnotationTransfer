@@ -8,9 +8,12 @@ source=$HOME/.bashrc
 mkdir $path
 mkdir $path_mummer
 
-
 #Install must-have programs
-sudo apt-get --assume-yes install subversion git wget vim tar mummer
+sudo apt-get --assume-yes  python-setuptools python-dev build-essential git wget vim tar mummer
+#INstall pip
+sudo easy_install pip
+#install biopython
+pip install biopython
 
 #Downloading mummer
 wget --no-check-certificate https://sourceforge.net/projects/mummer/files/latest/download?source=files -O mummer.tar.gz
