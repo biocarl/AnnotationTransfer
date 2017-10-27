@@ -8,6 +8,12 @@ source=$HOME/.bashrc
 mkdir $path
 mkdir $path_mummer
 
+
+
+#Install must-have programs
+sudo apt-get --assume-yes install subversion git wget vim tar
+
+
 #Downloading mummer
 wget --no-check-certificate https://sourceforge.net/projects/mummer/files/latest/download?source=files -O mummer.tar.gz
 

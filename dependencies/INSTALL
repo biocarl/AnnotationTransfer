@@ -37,6 +37,10 @@ UNINSTALL
 
 INSTALL Biopython  *Adapted to server environment
 
+0) If you have admin rights (e.g. locally) try installing biopython with pip, so you won't need the other steps>
+	python -m pip install --upgrade pip //or install
+	pip install biopython
+	//to check installation try import Bio in the python console
 0) Install a seperate Python 2.7.* (since you don't have admin-rights on the Server)
 1) Install numpy if not present (usually should)
 2) mkdir $wherePythonInstalled/site-packages (e.g. $HOME/bin/Python2.7.3/site-packages)
